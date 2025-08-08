@@ -1,0 +1,64 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #485;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;       /* bold text */
+    font-size: 20px;             /* increase text size */
+}
+
+header img {
+      height: 100px; /* adjust logo size */ 
+      width: 150px;
+      margin-right: 15px; /* space between logo */
+      display: flex;
+      align-items: center;      /* vertically center */
+      justify-content: flex-start;  /* align items to left */
+}
+
+
+nav a {
+    color: taupe;
+    margin: 18px;
+    text-decoration: underline;
+    font-style: italic;      /* italic text */
+    font-weight: bold;       /* bold text */
+    text-transform: uppercase; /* all uppercase */
+    font-size: 30px;             /* increase text size */
+}
+
+section {
+    padding: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;          /* allow items to wrap to next line */
+    gap: 10px;                /* space between images */
+    max-width: 900px;         /* optional max container width */
+    margin: auto;
+
+}
+
+.gallery img {
+    flex: 1 1 calc(25% - 10px); /* 4 images per row, minus gap */
+    max-width: calc(25% - 10px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+footer {
+    background-color: #485;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
