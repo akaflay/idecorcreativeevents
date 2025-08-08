@@ -24,6 +24,24 @@ header img {
 }
 
 
+.logo-qr-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px; /* space between logo and QR code */
+	justify-content: space-between; /* center horizontally */
+	padding: 0 20px;
+}
+
+.logo {
+height: 100px; /* adjust as needed */
+}
+
+.qr {
+height: 100px; /* match logo height */
+}
+
+
 nav a {
     color: taupe;
     margin: 18px;
