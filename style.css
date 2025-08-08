@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #485;
-    color: white;
+    background-color: sand;
+    color: black;
     padding: 30px;
     text-align: center;
     font-weight: bold;       /* bold text */
@@ -27,7 +27,7 @@ header img {
 nav a {
     color: taupe;
     margin: 18px;
-    text-decoration: underline;
+    text-decoration: none;
     font-style: italic;      /* italic text */
     font-weight: bold;       /* bold text */
     text-transform: uppercase; /* all uppercase */
@@ -53,6 +53,30 @@ section {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+}
+
+
+
+/* Lightbox overlay */
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+  cursor: zoom-out;
 }
 
 
