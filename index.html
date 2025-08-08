@@ -93,8 +93,14 @@
         </div>
 
         <h3>Leave a Review</h3>
-        <form action="https://formsubmit.co/idecorcreativeevents@gmail.com" method="POST">
         <form id="reviewForm">
+        <form action="https://formsubmit.co/idecorcreativeevents@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Review from iDecor Website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Thank you for your review! We'll get back to you shortly.">
+            <input type="hidden" name="_next" value="https://formsubmit.co/thanks.html">
+
             <label for="name">Your Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
             
