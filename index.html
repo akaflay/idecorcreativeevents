@@ -20,6 +20,7 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -84,7 +85,7 @@
             <p><strong>Neek S.:</strong> "Absolutely loved the wedding decor! It was magical and exceeded all expectations."</p>
         </div>
         <div class="review">
-            <p><strong>John J.:</strong> "Professional team and stunning stage setup. Made our corporate event look amazing!"</p>
+            <p><strong>John J.:</strong> "Professional team and stunning stage setup. Made our wedding event look amazing!"</p>
         </div>
         <div class="review">
             <p><strong>Angad K.:</strong> "The birthday party decorations were vibrant and fun. Highly recommended!"</p>
@@ -101,6 +102,27 @@
             <button type="submit">Submit Review</button>
         </form>
     </section>
+
+    <h3>Reply to Review</h3>
+    <form action="https://formsubmit.co/idecorcreativeevents@gmail.comm" method="POST">
+        <input type="hidden" name="_subject" value="New Review from iDecor Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Thank you for your review! We'll get back to you shortly.">
+
+        <label for="name">Neetu:</label><br>
+        <input type="text" id="name" name="Name" required><br><br>
+
+        <label for="email">idecorcreativeevents@gmail.com:</label><br>
+        <input type="email" id="email" name="Email" required><br><br>
+
+        <label for="comment">Your Review:</label><br>
+        <textarea id="comment" name="Comment" rows="4" required></textarea><br><br>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</section>
+
 
 
     <section id="contact">
