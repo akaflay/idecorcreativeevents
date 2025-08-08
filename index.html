@@ -112,6 +112,33 @@
 
             <button type="submit">Submit Review</button>
         </form>
+
+    <div id="thankYouPopup" style="display:none; margin-top: 20px; padding: 15px; border: 1px solid green; background: #e0ffe0;">
+    	✅ Thank you for your review! We’ve received your feedback.
+    </div>
+    
+    <script>
+    document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    	event.preventDefault(); // Stop default form action
+    
+    	const formData = new FormData(this);
+    
+    	fetch('https://formsubmit.co/idecorcreativeevents@gmail.com', {
+    		method: 'POST',
+    		body: formData,
+    		headers: {
+    			'Accept': 'application/json'
+    		}
+    	}).then(response => {
+    		if (response.ok) {
+    			document.getElementById('thankYouPopup').style.display = 'block';
+    			document.getElementById('reviewForm').reset();
+    		} else {
+    			alert("Oops! Something went wrong.");
+    		}
+    	});
+    });
+    </script>
     </section>
 
 
