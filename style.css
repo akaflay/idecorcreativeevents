@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #485;
-    color: white;
+    background-color: Sand;
+    color: black;
     padding: 30px;
     text-align: center;
     font-weight: bold;       /* bold text */
@@ -27,7 +27,7 @@ header img {
 nav a {
     color: taupe;
     margin: 18px;
-    text-decoration: underline;
+    text-decoration: none;
     font-style: italic;      /* italic text */
     font-weight: bold;       /* bold text */
     text-transform: uppercase; /* all uppercase */
