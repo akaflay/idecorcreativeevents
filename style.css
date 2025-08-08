@@ -80,6 +80,44 @@ section {
 }
 
 
+
+#reviews {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+.review {
+    margin-bottom: 20px;
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+}
+
+form#reviewForm {
+    margin-top: 20px;
+}
+
+form#reviewForm input,
+form#reviewForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+form#reviewForm button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form#reviewForm button:hover {
+    background-color: #333;
+}
+
 footer {
     background-color: #485;
     color: white;
