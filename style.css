@@ -7,12 +7,12 @@ body {
 
 header {
     background-color: sand;
-    color: black;
-    padding: 30px;
+    color: green;
+    padding: 20px;
     text-align: center;
     font-weight: bold;       /* bold text */
     font-size: 20px;             /* increase text size */
-	margin-top: 30px;
+	margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -54,6 +54,7 @@ nav a {
     font-size: 30px;             /* increase text size */
     padding: 10px;
 	margin-top: 40px;
+	align-items: center;
 }
 
 section {
