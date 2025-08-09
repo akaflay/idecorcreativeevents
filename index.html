@@ -82,7 +82,6 @@
             <img src="images/decor12.jpg" alt="Decor Image 9" class="gallery-img" />
             <img src="images/decor13.jpg" alt="Decor Image 10" class="gallery-img" />
             <img src="images/decor14.jpg" alt="Decor Image 11" class="gallery-img" />
-            <img src="images/decor15.jpg" alt="Decor Image 12" class="gallery-img" />
         </div>
     </section>
 
@@ -214,12 +213,12 @@
     });
     previousBtn.addEventListener('click', () => {
       const currentId = lightboxImage.src.match(/\d+/)[0];
-      const newId = (currentId - 1 + 16) % 16; // Wrap around to last image
+      const newId = (currentId - 1 + 15) % 15; // Wrap around to last image
       lightboxImage.src = `images/decor${newId}.jpg`;
     });
     nextBtn.addEventListener('click', () => {
        const currentId = lightboxImage.src.match(/\d+/)[0];
-      const newId = (currentId + 1) % 16; // Wrap around to first image
+      const newId = (currentId + 1) % 15; // Wrap around to first image
       lightboxImage.src = `images/decor${newId}.jpg`;
     });
   </script>
