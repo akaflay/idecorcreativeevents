@@ -12,8 +12,8 @@ header {
     text-align: center;
     font-weight: bold;       /* bold text */
     font-size: 20px;             /* increase text size */
-	margin-top: 40px;
-    margin-bottom: 40px;
+	margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 header img {
@@ -46,7 +46,7 @@ height: 100px; /* match logo height */
 
 nav a {
     color: brown;
-    margin: 18px;
+    margin: 30px;
     text-decoration: none;
     font-style: italic;      /* italic text */
     font-weight: bold;       /* bold text */
