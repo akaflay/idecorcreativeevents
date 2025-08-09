@@ -44,13 +44,14 @@ height: 100px; /* match logo height */
 
 
 nav a {
-    color: taupe;
+    color: brown;
     margin: 18px;
     text-decoration: none;
     font-style: italic;      /* italic text */
     font-weight: bold;       /* bold text */
     text-transform: uppercase; /* all uppercase */
     font-size: 30px;             /* increase text size */
+    padding: 10px;
 }
 
 section {
