@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>iDecor Creative Events - Stage Event Decoration</title>
     <link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+
+</script>
+
 </head>
+
 <body>
 
 
@@ -61,10 +67,14 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="images/decor4.jpeg" alt="Decor Image 1" class="gallery-img" />
-            <img src="images/decor5.jpeg" alt="Decor Image 2" class="gallery-img" />
-            <img src="images/decor6.jpeg" alt="Decor Image 3" class="gallery-img" />
-            <img src="images/decor7.JPG" alt="Decor Image 4" class="gallery-img" />
+            <img src="images/decor0.jpg" alt="Decor Image 16" class="gallery-img" />
+            <img src="images/decor1.jpg" alt="Decor Image 1" class="gallery-img" />
+            <img src="images/decor2.jpg" alt="Decor Image 2" class="gallery-img" />
+            <img src="images/decor3.jpg" alt="Decor Image 3" class="gallery-img" />
+            <img src="images/decor4.jpg" id="0" alt="Decor Image 1" class="gallery-img" />
+            <img src="images/decor5.jpg" id="1" alt="Decor Image 2" class="gallery-img" />
+            <img src="images/decor6.jpg" id="2" alt="Decor Image 3" class="gallery-img" />
+            <img src="images/decor7.JPG"  id="3" alt="Decor Image 4" class="gallery-img" />
             <img src="images/decor8.JPG" alt="Decor Image 5" class="gallery-img" />
             <img src="images/decor9.JPG" alt="Decor Image 6" class="gallery-img" />
             <img src="images/decor10.JPG" alt="Decor Image 7" class="gallery-img" />
@@ -73,11 +83,6 @@
             <img src="images/decor13.JPG" alt="Decor Image 10" class="gallery-img" />
             <img src="images/decor14.JPG" alt="Decor Image 11" class="gallery-img" />
             <img src="images/decor15.JPG" alt="Decor Image 12" class="gallery-img" />
-            <img src="images/decor16.jpg" alt="Decor Image 13" class="gallery-img" />
-            <img src="images/decor17.jpg" alt="Decor Image 14" class="gallery-img" />
-            <img src="images/decor18.jpg" alt="Decor Image 15" class="gallery-img" />
-            <img src="images/decor19.jpg" alt="Decor Image 16" class="gallery-img" />
-
         </div>
     </section>
 
@@ -161,13 +166,40 @@
 
 
   <!-- Lightbox overlay -->
-  <div id="lightbox-overlay">
+  <div id="lightbox-overlay"  style="flex-direction: column;">
+    <div style="display: flex; justify-content: space-between;">
+        <div style="align-content: center;">
+    <btn id="previous-btn" 
+    style="background: #ccc; 
+    align-self: center;
+    align-self: center;
+    cursor: pointer;
+    padding: 6%;">Prev</btn>
+    </div>
+    
     <img src="" alt="Enlarged Image" />
+    
+    <div style="align-content: center;">
+
+        
+    <btn id="next-btn" 
+    style="background: #ccc; 
+    align-self: center;
+    align-self: center;
+    cursor: pointer;
+    padding: 6%;">Next</btn>
+    </div>
+     </div>
+
+     
   </div>
 
   <script>
     const lightboxOverlay = document.getElementById('lightbox-overlay');
     const lightboxImage = lightboxOverlay.querySelector('img');
+    const closeBtn = document.getElementById('close-btn');
+    const previousBtn = document.getElementById('previous-btn');
+    const nextBtn = document.getElementById('next-btn');
 
     document.querySelectorAll('.gallery-img').forEach(img => {
       img.addEventListener('click', () => {
@@ -176,9 +208,19 @@
       });
     });
 
-    lightboxOverlay.addEventListener('click', () => {
+    lightboxImage.addEventListener('click', () => {
       lightboxOverlay.style.display = 'none';
       lightboxImage.src = '';
+    });
+    previousBtn.addEventListener('click', () => {
+      const currentId = lightboxImage.src.match(/\d+/)[0];
+      const newId = (currentId - 1 + 16) % 16; // Wrap around to last image
+      lightboxImage.src = `images/decor${newId}.jpg`;
+    });
+    nextBtn.addEventListener('click', () => {
+       const currentId = lightboxImage.src.match(/\d+/)[0];
+      const newId = (currentId + 1) % 16; // Wrap around to first image
+      lightboxImage.src = `images/decor${newId}.jpg`;
     });
   </script>
 
