@@ -44,7 +44,7 @@ height: 100px; /* match logo height */
 }
 
 
-nav a {
+.nav a {
     color: #4A6FA5; /* warm blue tone */
     margin: 18px;
     text-decoration: none;
