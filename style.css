@@ -51,9 +51,9 @@ height: 100px; /* match logo height */
     font-family: 'Great Vibes', cursive;
     font-weight: normal;       /* normal not bold text */
     text-transform: uppercase; /* all uppercase */
-    font-size: 30px;             /* increase text size */
+    font-size: 20px;             /* increase text size */
     padding: 20px;
-    align-items: center;
+    align-items: right;
     text-align: right;
 }
 
