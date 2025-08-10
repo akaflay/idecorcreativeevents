@@ -45,17 +45,16 @@ height: 100px; /* match logo height */
 
 
 nav a {
-    color: brown;
-    margin: 30px;
+    color: blue;
+    margin: 20px;
     text-decoration: none;
     font-style: italic;      /* italic text */
-    font-weight: bold;       /* bold text */
     text-transform: uppercase; /* all uppercase */
-    font-size: 30px;             /* increase text size */
+    font-size: 20px;             /* increase text size */
     padding: 10px;
-	  margin-top: 40px;
+	margin-top: 40px;
     text-align: center;
-	  align-items: center;
+	align-items: center;
 }
 
 section {
