@@ -256,5 +256,65 @@
     });
   </script>
 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll to Top Arrow</title>
+  <style>
+    body {
+      height: 2000px; /* Just for demo scrolling */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Arrow button styling */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;       /* distance from bottom */
+      right: 20px;         /* distance from left */
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      display: none;      /* hidden by default */
+      z-index: 1000;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="scrollTopBtn">&#8593;</button> <!-- Up arrow -->
+
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    // Show button when scrolling down 100px
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to top when clicked
+    scrollBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
+
+
+	
 </body>
 </html>
