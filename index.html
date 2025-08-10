@@ -233,64 +233,102 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     </footer>
 
 
-  <!-- Lightbox overlay -->
-  <div id="lightbox-overlay"  style="flex-direction: column;">
-    <div style="display: flex; justify-content: space-between;">
-        <div style="align-content: center;">
-    <btn id="previous-btn" 
-    style="background: #ccc; 
-    align-self: center;
-    align-self: center;
-    cursor: pointer;
-    padding: 6%;">Prev</btn>
-    </div>
-    
-    <img src="" alt="Enlarged Image" />
-    
-    <div style="align-content: center;">
+	
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+    }
+    .gallery-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .buttons {
+      margin-top: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: #4a6fa5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #355c84;
+    }
+  </style>
+</head>
+<body>
 
-        
-    <btn id="next-btn" 
-    style="background: #ccc; 
-    align-self: center;
-    align-self: center;
-    cursor: pointer;
-    padding: 6%;">Next</btn>
+  <div class="gallery-container">
+    <img id="galleryImage" src="images/decor4.jpeg" alt="Decor Image 1">
+    <div class="buttons">
+      <button onclick="prevImage()">Previous</button>
+      <button onclick="nextImage()">Next</button>
     </div>
-     </div>
-
-     
   </div>
 
   <script>
-    const lightboxOverlay = document.getElementById('lightbox-overlay');
-    const lightboxImage = lightboxOverlay.querySelector('img');
-    const closeBtn = document.getElementById('close-btn');
-    const previousBtn = document.getElementById('previous-btn');
-    const nextBtn = document.getElementById('next-btn');
+    // List your image filenames here
+    const images = [
+      "gallery/image1.jpg",
+	  "images/decor4.jpeg",
+	  "images/decor5.jpeg",
+	  "images/decor6.jpeg",
+	  "images/decor7.jpeg",
+	  "images/decor8.jpeg",
+	  "images/decor9.jpeg",
+	  "images/decor10.jpeg",
+	  "images/decor11.jpeg",
+	  "images/decor12.jpeg",
+	  "images/decor13.jpeg",
+	  "images/decor14.jpeg",
+	  "images/decor15.jpeg",
+	  "images/decor16.jpeg",
+	  "images/decor17.jpeg",
+	  "images/decor18.jpeg",
+	  "images/decor19.jpeg"
+    ];
 
-    document.querySelectorAll('.gallery-img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImage.src = img.src;
-        lightboxOverlay.style.display = 'flex';
-      });
-    });
+    let currentIndex = 0;
 
-    lightboxImage.addEventListener('click', () => {
-      lightboxOverlay.style.display = 'none';
-      lightboxImage.src = '';
-    });
-    previousBtn.addEventListener('click', () => {
-      const currentId = lightboxImage.src.match(/\d+/)[0];
-      const newId = (currentId - 1 + 15) % 15; // Wrap around to last image
-      lightboxImage.src = `images/decor${newId}.jpg`;
-    });
-    nextBtn.addEventListener('click', () => {
-       const currentId = lightboxImage.src.match(/\d+/)[0];
-      const newId = (currentId + 1) % 15; // Wrap around to first image
-      lightboxImage.src = `images/decor${newId}.jpg`;
-    });
+    function showImage(index) {
+      document.getElementById("galleryImage").src = images[index];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
   </script>
+
+</body>
+</html>
+
+
+	
 
 
 <!DOCTYPE html>
