@@ -36,11 +36,13 @@ header img {
 }
 
 .logo {
-height: 100px; /* adjust as needed */
+height: 90px; /* adjust as needed */
+width: 90px;
 }
 
 .qr {
 height: 100px; /* match logo height */
+width: 80px;
 }
 
 
