@@ -61,6 +61,14 @@ section {
     padding: 40px;
 }
 
+
+about {
+      		font-family: 'Great Vibes', cursive;
+      		font-size: 40px;
+      		color: #9A7B4F; /* warm brown color */
+      		font-weight: normal;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;          /* allow items to wrap to next line */
