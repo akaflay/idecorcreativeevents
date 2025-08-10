@@ -45,16 +45,16 @@ height: 100px; /* match logo height */
 
 
 nav a {
-    color: blue;
-    margin: 20px;
+    color: #9A7B4F; /* warm brown color */
+    margin: 18px;
     text-decoration: none;
-    font-style: italic;      /* italic text */
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;       /* normal not bold text */
     text-transform: uppercase; /* all uppercase */
-    font-size: 20px;             /* increase text size */
-    padding: 10px;
-	margin-top: 40px;
+    font-size: 30px;             /* increase text size */
+    padding: 20px;
+    align-items: center;
     text-align: center;
-	align-items: center;
 }
 
 section {
