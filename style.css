@@ -44,7 +44,7 @@ height: 100px; /* match logo height */
 }
 
 
-nav a {
+.nav a {
     color: #9A7B4F; /* warm brown color */
     margin: 18px;
     text-decoration: none;
