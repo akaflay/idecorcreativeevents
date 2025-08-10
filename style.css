@@ -62,7 +62,13 @@ section {
 }
 
 
-.about {
+h1 {
+      		font-family: 'Great Vibes', cursive;
+      		font-size: 40px;
+      		color: #9A7B4F; /* warm brown color */
+      		font-weight: normal;
+}
+h2 {
       		font-family: 'Great Vibes', cursive;
       		font-size: 40px;
       		color: #9A7B4F; /* warm brown color */
