@@ -54,7 +54,7 @@ height: 100px; /* match logo height */
     font-size: 30px;             /* increase text size */
     padding: 20px;
     align-items: center;
-    text-align: center;
+    text-align: right;
 }
 
 section {
