@@ -111,14 +111,14 @@ section {
 }
 
 .review {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-style: italic;
     border-left: 4px solid #ccc;
     padding-left: 15px;
 }
 
 form#reviewForm {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 form#reviewForm input,
