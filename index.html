@@ -96,6 +96,100 @@
     </section>
 
 
+
+
+	
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+    }
+    .gallery-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .buttons {
+      margin-top: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: #4a6fa5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #355c84;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <img id="galleryImage" src="images/decor4.jpeg" alt="Decor Image 1">
+    <div class="buttons">
+      <button onclick="prevImage()">Previous</button>
+      <button onclick="nextImage()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    // List your image filenames here
+    const images = [
+	  "images/decor4.jpeg",
+	  "images/decor5.jpeg",
+	  "images/decor6.jpeg",
+	  "images/decor7.JPG",
+	  "images/decor8.JPG",
+	  "images/decor9.JPG",
+	  "images/decor10.JPG",
+	  "images/decor11.JPG",
+	  "images/decor12.JPG",
+	  "images/decor13.JPG",
+	  "images/decor14.JPG",
+	  "images/decor15.JPG",
+	  "images/decor16.jpg",
+	  "images/decor17.jpg",
+	  "images/decor18.jpg",
+	  "images/decor19.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      document.getElementById("galleryImage").src = images[index];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
+
+
+	
     <section id="reviews">
         <h2>Client Reviews</h2>
         <div class="review">
@@ -231,97 +325,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     <footer>
         <p>© 2025 iDecor Creative Events. All rights reserved.</p>
     </footer>
-
-
-	
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Image Gallery</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f4f4;
-    }
-    .gallery-container {
-      max-width: 600px;
-      margin: 50px auto;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      border-radius: 10px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .buttons {
-      margin-top: 15px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin: 0 5px;
-      cursor: pointer;
-      background: #4a6fa5;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    button:hover {
-      background: #355c84;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="gallery-container">
-    <img id="galleryImage" src="images/decor4.jpeg" alt="Decor Image 1">
-    <div class="buttons">
-      <button onclick="prevImage()">Previous</button>
-      <button onclick="nextImage()">Next</button>
-    </div>
-  </div>
-
-  <script>
-    // List your image filenames here
-    const images = [
-	  "images/decor4.jpeg",
-	  "images/decor5.jpeg",
-	  "images/decor6.jpeg",
-	  "images/decor7.JPG",
-	  "images/decor8.JPG",
-	  "images/decor9.JPG",
-	  "images/decor10.JPG",
-	  "images/decor11.JPG",
-	  "images/decor12.JPG",
-	  "images/decor13.JPG",
-	  "images/decor14.JPG",
-	  "images/decor15.JPG",
-	  "images/decor16.jpg",
-	  "images/decor17.jpg",
-	  "images/decor18.jpg",
-	  "images/decor19.jpg"
-    ];
-
-    let currentIndex = 0;
-
-    function showImage(index) {
-      document.getElementById("galleryImage").src = images[index];
-    }
-
-    function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    }
-
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
-  </script>
 
 </body>
 </html>
