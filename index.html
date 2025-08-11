@@ -193,13 +193,13 @@
     <section id="reviews">
         <h2>Client Reviews</h2>
         <div class="review">
-            <p><strong>Neek S.:</strong> "Absolutely loved the wedding decor! It was magical and exceeded all expectations."</p>
+            <p><strong>Neek S.:</strong> "Absolutely loved the wedding decor! It was magical and exceeded all expectations." <label for="star5" >★★★★★</label> </p>
         </div>
         <div class="review">
-            <p><strong>John J.:</strong> "Professional team and stunning stage setup. Made our wedding event look amazing!"</p>
+            <p><strong>John J.:</strong> "Professional team and stunning stage setup. Made our wedding event look amazing!" <label for="star5" >★★★★★</label> </p>
         </div>
         <div class="review">
-            <p><strong>Angad K.:</strong> "The birthday party decorations were vibrant and fun. Highly recommended!"</p>
+            <p><strong>Angad K.:</strong> "The birthday party decorations were vibrant and fun. Highly recommended!" <label for="star5" >★★★★★</label> </p>
         </div>
 
         <h3>Leave a Review</h3>
@@ -219,6 +219,19 @@
 
             <label for="comment">Your Review:</label><br>
             <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+			
+    <div class="star-rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">★</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">★</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">★</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">★</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">★</label>
+    </div>
 
             <button type="submit">Submit Review</button>
         </form>
