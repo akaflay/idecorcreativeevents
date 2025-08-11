@@ -54,7 +54,7 @@ width: 80px;
     font-weight: bold;       /* normal not bold text */
     text-transform: uppercase; /* all uppercase */
     font-size: 20px;             /* increase text size */
-    padding: 20px;
+    padding: 15px;
     align-items: right;
     text-align: right;
 }
