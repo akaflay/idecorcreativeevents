@@ -148,6 +148,32 @@ form#reviewForm textarea {
     box-sizing: border-box;
 }
 
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .star-rating input[type="radio"]:checked ~ label {
+    color: gold;
+  }
+
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: orange;
+  }
+
 form#reviewForm button {
     padding: 10px 20px;
     margin-top: 10px;
